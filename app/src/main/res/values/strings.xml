@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movie Zone</string>
+    <string name="title_movie">Movie</string>
+    <string name="title_tvshow">Tv Show</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="lbl_title">Title</string>
+    <string name="lbl_overview">Overview</string>
+    <string name="lbl_release">Released on</string>
+    <string name="lbl_rating">Rating</string>
+    <string name="lbl_vote_count">Voted by</string>
+    <string name="vote_count">%1$s users</string>
+    <string name="popularity">Popularity</string>
+    <string name="menu_newest">Newest</string>
+    <string name="menu_oldest">Oldest</string>
+    <string name="menu_random">Random</string>
+    <string name="add_fav">Add item to favorite</string>
+    <string name="shareTitle">Share to your friend and family!</string>
+    <string name="shareText">Find your favorite movie info in Movie Zone app now!</string>
+</resources>

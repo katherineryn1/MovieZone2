@@ -1,0 +1,7 @@
+<resources>
+    <string name="title_movie">Movie</string>
+    <string name="title_tvshow">Tv Show</string>
+    <string name="empty_fav">Favorite list is empty</string>
+    <string name="msg_undo">Cancel remove item?</string>
+    <string name="msg_ok">OK</string>
+</resources>
