@@ -11,21 +11,96 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="4dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_cv_film"
-        android:paddingBottom="80dp"
-        android:clipToPadding="false"/>
+        tools:listitem="@layout/item_cv_film" />
 
-    <ProgressBar
+    <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_auto_start="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="80dp">
+
+                <TableRow
+                    android:layout_marginBottom="8dp">
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1" />
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginBottom="8dp">
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1" />
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginBottom="8dp">
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1" />
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginBottom="8dp">
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1" />
+                    <include
+                        layout="@layout/item_list_placeholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

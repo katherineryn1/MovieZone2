@@ -24,4 +24,7 @@ dependencies {
 
     // leak canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+
+    // shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
 }

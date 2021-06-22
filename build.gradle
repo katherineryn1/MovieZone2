@@ -54,6 +54,8 @@ ext {
 
     androidDbSqlCipher = "4.4.0"
     sqliteKtx = "2.1.0"
+
+    shimmerVersion = "0.5.0"
 }
 
 task clean(type: Delete) {
