@@ -20,6 +20,12 @@ android {
         buildConfigField("String", "BASE_URL", baseUrl)
         buildConfigField("String", "IMAGE_URL", imageUrl)
 
+        buildConfigField("String", "CERT_PINNING1", certificatePinning1)
+        buildConfigField("String", "CERT_PINNING2", certificatePinning2)
+        buildConfigField("String", "CERT_PINNING3", certificatePinning3)
+
+        buildConfigField("String", "PASSPHRASE", passphrase)
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }

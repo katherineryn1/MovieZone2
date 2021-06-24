@@ -1,6 +1,7 @@
 package com.katherineryn.moviezone.core.di
 
 import androidx.room.Room
+import com.katherineryn.moviezone.core.BuildConfig.*
 import com.katherineryn.moviezone.core.data.FilmRepository
 import com.katherineryn.moviezone.core.data.source.local.LocalDataSource
 import com.katherineryn.moviezone.core.data.source.local.room.FilmDatabase
@@ -23,7 +24,7 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<FilmDatabase>().filmDao() }
     single {
-        val passphrase: ByteArray = SQLiteDatabase.getBytes("kathy".toCharArray())
+        val passphrase: ByteArray = SQLiteDatabase.getBytes(PASSPHRASE.toCharArray())
         val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
@@ -38,9 +39,9 @@ val networkModule = module {
     single {
         val hostname = "api.themoviedb.org"
         val certificatePinner = CertificatePinner.Builder()
-            .add(hostname, "sha256/vqZVAzTqUP8BGkfl88yU7SQ3C8J2uNEa55B7RZjEg0=")
-            .add(hostname, "sha256/JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=")
-            .add(hostname, "sha256/KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=")
+            .add(hostname, CERT_PINNING1)
+            .add(hostname, CERT_PINNING2)
+            .add(hostname, CERT_PINNING3)
             .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
